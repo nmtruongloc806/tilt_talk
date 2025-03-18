@@ -23,6 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> _initializeServices() async {
+    _callService.setContext(context);
     await _callService.initialize();
 
     _callService.onCallStateChanged = (PhoneState state) {
@@ -93,4 +94,4 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-} 
+}
